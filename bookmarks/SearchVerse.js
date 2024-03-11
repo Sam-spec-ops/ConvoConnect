@@ -76,7 +76,7 @@ const handlecountminus=()=>{
       <View className="w-screen py-7 items-center">
       <View className="bg-green-950 h-14 w-64 rounded-xl flex justify-center items-center"><Text className="text-3xl text-white font-bold">{book}</Text></View>
       </View>
-      <View className="flex w-screen flex-row w-screen justify-center gap-4 items-center">
+      <View className="flex w-screen flex-row justify-center gap-4 items-center">
         <TouchableOpacity onPress={()=>navigateToChapter(-1)} className="bg-amber-600 flex justify-center items-center rounded-full h-10 w-10" ><Icon name="arrow-left" size={27} color="#f7fafc" /></TouchableOpacity>
         <Text className="text-3xl font-bold">Chapter {chapter}</Text>
         <TouchableOpacity onPress={()=>navigateToChapter(+1)} className="bg-green-950 flex justify-center items-center rounded-full h-10 w-10"><Icon name="arrow-right" size={27} color="#f7fafc" /></TouchableOpacity>
