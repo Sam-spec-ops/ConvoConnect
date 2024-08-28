@@ -3,34 +3,38 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import Home from "./bookmarks/BibleApp"
-import Page from "./bookmarks/BiblePage"
-import Bible from "./bookmarks/BibleList"
-import Chapter from "./bookmarks/BibleChapter"
-import Verse from "./bookmarks/BibleVerse"
-import Search from "./bookmarks/SearchVerse"
-import Study from './bookmarks/BibleStudy'
-import Guide from './bookmarks/BibleGuide'
-import Save from './bookmarks/BookMark'
+import Chats from './screen/Chats';
+import Messages from './screen/Messages';
+import Login from './screen/Login';
+import Start from './screen/Start';
+import Register from './screen/Register';
+import AddChat from './screen/AddChat';
+import Form from './screen/Form';
+import CameraView from './screen/Camera'
+import Settings from './screen/Settings'
+import VideoCall from './screen/VideoCall'
+import AudioCall from './screen/AudioCall'
 export default function App() {
   const Stack = createStackNavigator();
   return (
     <NavigationContainer>
       <Stack.Navigator
-      initialRouteName="Home"
+      initialRouteName="Start"
       screenOptions={{
         headerShown: false,
       }}
       >
-        <Stack.Screen options={{gestureDirection:"horizontal",gestureEnabled:true}} name="Home" component={Home} />
-        <Stack.Screen name="Page" component={Page} options={{gestureDirection:"horizontal",gestureEnabled:true}} />
-        <Stack.Screen name="Bible" component={Bible} options={{gestureDirection:"horizontal",gestureEnabled:true}} />
-        <Stack.Screen name="Chapter" component={Chapter} options={{gestureDirection:"horizontal",gestureEnabled:true}} />
-        <Stack.Screen name="Verse" component={Verse} options={{gestureDirection:"horizontal",gestureEnabled:true}} />
-        <Stack.Screen name="Search" component={Search} options={{gestureDirection:"horizontal",gestureEnabled:true}} />
-        <Stack.Screen name="Study" component={Study} options={{gestureDirection:"horizontal",gestureEnabled:true}} />
-        <Stack.Screen name="Guide" component={Guide} options={{gestureDirection:"horizontal",gestureEnabled:true}}/>
-        <Stack.Screen name="Save" component={Save} options={{gestureDirection:"horizontal",gestureEnabled:true}}/>
+        <Stack.Screen name='Form' component={Form} options={{gestureDirection:"horizontal",gestureEnabled:true}}/>
+        <Stack.Screen name='Start' component={Start} options={{gestureDirection:"horizontal",gestureEnabled:true}}/>
+        <Stack.Screen name='Chats' component={Chats} options={{gestureDirection:"horizontal",gestureEnabled:true}}/>
+        <Stack.Screen name="Message" component={Messages} options={{gestureDirection:"horizontal",gestureEnabled:true}}/>
+        <Stack.Screen name="Login" component={Login} options={{gestureDirection:"horizontal",gestureEnabled:true}}/>
+        <Stack.Screen name="Register" component={Register} options={{gestureDirection:"horizontal",gestureEnabled:true}}/>
+        <Stack.Screen name="Add-Chat" component={AddChat} options={{gestureDirection:"horizontal",gestureEnabled:true}}/>
+        <Stack.Screen name="Camera" component={CameraView} options={{gestureDirection:"horizontal",gestureEnabled:true}} />
+        <Stack.Screen name="Settings" component={Settings} options={{gestureDirection:"horizontal",gestureEnabled:true}} />
+        <Stack.Screen name="VideoCall" component={VideoCall} options={{gestureDirection:"horizontal",gestureEnabled:true}} />
+        <Stack.Screen name="AudioCall" component={AudioCall} options={{gestureDirection:"horizontal",gestureEnabled:true}} />
       </Stack.Navigator>
     </NavigationContainer>
   );

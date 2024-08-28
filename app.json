@@ -1,15 +1,19 @@
 {
   "expo": {
-    "name": "Bible App",
-    "slug": "bible-app",
+    "name": "Convo Connect",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.jpg",
+    "icon": "./assets/msg.png",
     "userInterfaceStyle": "light",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "enabled": true,
+      "fallbackToCacheTimeout": 0,
+      "checkAutomatically": "ON_LOAD"
     },
     "assetBundlePatterns": [
       "**/*"
@@ -23,15 +27,23 @@
         "foregroundImage": "./assets/icon.jpg",
         "backgroundColor": "#ffffff"
       },
-      "package": "BibleApp.App"
+      "permissions": [
+        "AUDIO_RECORDING",
+        "CAMERA",
+        "CAMERA_ROLL",
+        "CONTACTS",
+        "LOCATION",
+        "MICROPHONE",
+        "PHONE_STATE",
+        "READ_EXTERNAL_STORAGE",
+        "RECORD_AUDIO",
+        "VIDEO_LIBRARY",
+        "WRITE_EXTERNAL_STORAGE"
+      ],
+      "package": "Convo_Connect.App"
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    },
-    "extra": {
-      "eas": {
-        "projectId": "ef22dc68-e0d0-43eb-9828-b0fa45d095eb"
-      }
     },
     "owner": "samueloni"
   }
